@@ -73,26 +73,6 @@
             justify-content: center;
         }
 
-        /* Floating sparkles */
-        .sparkle {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--primary-green, #7A9B90);
-            opacity: 0;
-            animation: sparkle-float 6s ease-in-out infinite;
-        }
-        .sparkle:nth-child(1) { left: 15%; top: 25%; animation-delay: 0s; }
-        .sparkle:nth-child(2) { left: 80%; top: 20%; animation-delay: 1.5s; width: 4px; height: 4px; }
-        .sparkle:nth-child(3) { left: 25%; top: 70%; animation-delay: 3s; width: 5px; height: 5px; }
-        .sparkle:nth-child(4) { left: 75%; top: 65%; animation-delay: 4.5s; }
-        .sparkle:nth-child(5) { left: 50%; top: 15%; animation-delay: 2s; width: 4px; height: 4px; }
-
-        @keyframes sparkle-float {
-            0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
-            50% { opacity: 0.4; transform: translateY(-20px) scale(1); }
-        }
 
         .error-hint {
             font-family: 'VT323', monospace;
@@ -133,12 +113,6 @@
 
     <!-- 404 CONTENT -->
     <div class="error-page">
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-
         <img src="images/lalah-magnifying-glass.png" alt="Lalah searching with a magnifying glass" class="error-mascot">
         <div class="error-code">404</div>
         <h1 class="error-title">Lalah searched everywhere!</h1>
