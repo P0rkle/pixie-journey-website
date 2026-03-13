@@ -590,7 +590,7 @@ a { color: var(--outline-brown); }
     margin-bottom: 1rem;
 }
 .entry-note { color: var(--text-brown); font-style: italic; }
-.support-msg { margin-top: 1rem; }
+.support-msg { margin-top: 1rem; text-align: center; }
 
 /* ===== APP TEASER ===== */
 .teaser-content {
