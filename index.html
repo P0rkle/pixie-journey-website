@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixie Journey — Free Life in Pixels Tracking PDFs</title>
     <meta name="description" content="Download free A4 printable mood, sleep & habit tracker coloring pages for your bullet journal. Featuring Lalah the tracking pixie. No streaks. No pressure. App coming 2026.">
-    <meta name="keywords" content="bullet journal tracker, free printable tracker, mood tracker PDF, sleep tracker, habit tracker, coloring page, A4 printable, bujo, life in pixels">
+    <!-- keywords meta deprecated, removed -->
     <link rel="canonical" href="https://pixiejourney.com/">
 
     <!-- Open Graph -->
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -43,18 +44,20 @@
                 </div>
                 <span class="logo-pixel">Pixie</span><span class="logo-journey">Journey</span>
             </a>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
                 <a href="features.html">Features</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="#get-pdfs" class="nav-cta">Get Free PDFs</a>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </header>
+
+    <main id="main-content">
 
     <!-- HERO -->
     <section class="hero">
@@ -174,7 +177,7 @@
             <h2 class="section-title">Sneak Peek</h2>
             <div class="teaser-content">
                 <div class="teaser-phone">
-                    <img src="assets/screen-daily-logging-ui.png" alt="Pixie Journey app screenshot">
+                    <img loading="lazy" src="assets/screen-daily-logging-ui.png" alt="Pixie Journey app screenshot">
                 </div>
                 <div class="teaser-features">
                     <ul>
@@ -214,7 +217,7 @@
         <div class="section-inner">
             <div class="lalah-intro">
                 <div class="lalah-image">
-                    <img src="assets/stickers/LALAH_POSE_HAPPY_PRIMARY_WAND_V1.png" alt="Lalah the tracking pixie">
+                    <img loading="lazy" src="assets/stickers/LALAH_POSE_HAPPY_PRIMARY_WAND_V1.png" alt="Lalah the tracking pixie">
                 </div>
                 <div class="lalah-text">
                     <h2>Meet Lalah <i class="fa-solid fa-wand-magic-sparkles"></i></h2>
@@ -320,11 +323,11 @@
                 <div class="preview-card" onclick="openLightbox(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/printables/mood-star-tracker-preview.jpg" alt="Lalah mood star tracker coloring page preview">
+                            <img loading="lazy" src="assets/printables/mood-star-tracker-preview.jpg" alt="Lalah mood star tracker coloring page preview">
                             <span>Mood Star Tracker</span>
                         </div>
                         <div class="flip-card-back">
-                            <img src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
+                            <img loading="lazy" src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
                             <span>+ Dot Grid Notes Page</span>
                         </div>
                     </div>
@@ -333,11 +336,11 @@
                 <div class="preview-card" onclick="openLightbox(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/printables/sleep-potion-tracker-preview.jpg" alt="Lalah sleep potion tracker coloring page preview">
+                            <img loading="lazy" src="assets/printables/sleep-potion-tracker-preview.jpg" alt="Lalah sleep potion tracker coloring page preview">
                             <span>Sleep Potion Tracker</span>
                         </div>
                         <div class="flip-card-back">
-                            <img src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
+                            <img loading="lazy" src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
                             <span>+ Dot Grid Notes Page</span>
                         </div>
                     </div>
@@ -346,11 +349,11 @@
                 <div class="preview-card" onclick="openLightbox(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/printables/macaron-tracker-preview.jpg" alt="Lalah macaron universal tracker coloring page preview">
+                            <img loading="lazy" src="assets/printables/macaron-tracker-preview.jpg" alt="Lalah macaron universal tracker coloring page preview">
                             <span>Macaron Tracker</span>
                         </div>
                         <div class="flip-card-back">
-                            <img src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
+                            <img loading="lazy" src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
                             <span>+ Dot Grid Notes Page</span>
                         </div>
                     </div>
@@ -359,11 +362,11 @@
                 <div class="preview-card" onclick="openLightbox(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/printables/patch-tracker-preview.jpg" alt="Lalah garden patch universal tracker coloring page preview">
+                            <img loading="lazy" src="assets/printables/patch-tracker-preview.jpg" alt="Lalah garden patch universal tracker coloring page preview">
                             <span>Garden Patch Tracker</span>
                         </div>
                         <div class="flip-card-back">
-                            <img src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
+                            <img loading="lazy" src="assets/printables/dot-grid-preview.jpg" alt="Dot grid notes page included">
                             <span>+ Dot Grid Notes Page</span>
                         </div>
                     </div>
@@ -372,7 +375,7 @@
             </div>
             
             <div class="dot-grid-bonus">
-                <img src="assets/printables/dot-grid-preview.jpg" alt="Free dot grid A4 printable page" class="dot-grid-thumb" onclick="openLightbox(this)">
+                <img loading="lazy" src="assets/printables/dot-grid-preview.jpg" alt="Free dot grid A4 printable page" class="dot-grid-thumb" onclick="openLightbox(this)">
                 <div class="dot-grid-info">
                     <h3>Bonus: Free Dot Grid Page</h3>
                     <p>Included with every tracker + available as a standalone printable. 5mm grid, A4, 300 DPI. Perfect for notes, journaling, or extra tracking.</p>
@@ -425,6 +428,7 @@
                 <p>Enter your email and we'll send you a download link for all 4 tracker PDFs.</p>
                 
                 <form class="email-form" onsubmit="handleSubmit(event)">
+                    <label for="email-pdf" class="sr-only">you@example.com</label>
                     <input type="email" id="email-pdf" class="input" placeholder="you@example.com" required>
                     <button type="submit" class="btn btn-primary">Send me the PDFs</button>
                 </form>
@@ -458,6 +462,7 @@
                 </div>
                 
                 <form class="email-form" onsubmit="handleWaitlist(event)">
+                    <label for="email-waitlist" class="sr-only">you@example.com</label>
                     <input type="email" id="email-waitlist" class="input" placeholder="you@example.com" required>
                     <button type="submit" class="btn btn-primary">Join the Waitlist</button>
                 </form>
@@ -478,6 +483,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -526,26 +533,41 @@
     <!-- LIGHTBOX -->
     <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" aria-label="Close">&times;</button>
-        <img id="lightbox-img" src="" alt="Enlarged preview">
+        <img loading="lazy" id="lightbox-img" src="" alt="Enlarged preview">
         <p class="lightbox-caption" id="lightbox-caption"></p>
         <a href="#get-pdfs" class="btn btn-primary lightbox-cta" onclick="closeLightbox(event)">Get This PDF Free</a>
     </div>
 
     <!-- TOAST -->
-    <div class="toast" id="toast">
+    <div class="toast" role="alert" aria-live="polite" id="toast">
         <span class="toast-icon"><i class="fa-solid fa-check"></i></span>
         <span id="toast-msg">Thanks!</span>
     </div>
 
     <script>
-    // Mobile menu toggle
+    // Mobile menu toggle with aria-expanded
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
+
+    // Keyboard-accessible preview cards
+    document.querySelectorAll('.flip-card').forEach(function(card) {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', (card.querySelector('.flip-card-front span') || {}).textContent || 'View tracker preview');
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(card);
+            }
+        });
+    });
 
     // Config — update SUPABASE_URL after project creation
     const SUPABASE_URL = ''; // e.g. https://xxxxx.supabase.co

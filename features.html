@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features | Pixie Journey</title>
-    <meta name="description" content="Track mood, sleep, and 20+ more categories with Pixie Journey. See all features and tracking categories.">
+    <title>Features | Pixie Journey - Triple-Layer Health Intelligence</title>
+    <meta name="description" content="Discover Pixie Journey's triple-layer intelligence system: structured tracking, context notes, and predictive analytics. More than a mood tracker.">
     <meta property="og:title" content="Features | Pixie Journey">
     <meta property="og:description" content="Track mood, sleep, and 20+ more categories with beautiful pixel stickers. 3-tap logging, context notes, and pattern detection.">
     <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -39,6 +40,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -334,6 +337,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -383,6 +388,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>

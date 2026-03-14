@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Tracking PDFs | Pixie Journey</title>
-    <meta name="description" content="Get free Pixie Journey Lalah tracker coloring page PDFs for your bullet journal. Mood, sleep, macaron &amp; garden patch trackers. True A4, 300 DPI print-ready.">
+    <title>Free Printable Tracker PDFs | Pixie Journey - A4 Coloring Pages</title>
+    <meta name="description" content="Download 4 free A4 printable tracker coloring pages plus a dot grid journal page. Mood, sleep, and universal trackers featuring Lalah the tracking pixie.">
     <meta property="og:title" content="Free Tracking PDFs | Pixie Journey">
     <meta property="og:description" content="Download 4 free Lalah tracker coloring pages + dot grid for your bullet journal. True A4, 300 DPI, print-ready PDFs.">
     <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -39,6 +40,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="free-tracking-pdfs.html" class="nav-cta active">Get Free Tracking PDFs</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -69,15 +72,15 @@
                     <span>Mood Star Tracker</span>
                 </div>
                 <div class="preview-card">
-                    <img src="assets/printables/sleep-potion-tracker-preview.jpg" alt="Lalah sleep potion tracker coloring page preview">
+                    <img loading="lazy" src="assets/printables/sleep-potion-tracker-preview.jpg" alt="Lalah sleep potion tracker coloring page preview">
                     <span>Sleep Potion Tracker</span>
                 </div>
                 <div class="preview-card">
-                    <img src="assets/printables/macaron-tracker-preview.jpg" alt="Lalah macaron universal tracker coloring page preview">
+                    <img loading="lazy" src="assets/printables/macaron-tracker-preview.jpg" alt="Lalah macaron universal tracker coloring page preview">
                     <span>Macaron Tracker</span>
                 </div>
                 <div class="preview-card">
-                    <img src="assets/printables/patch-tracker-preview.jpg" alt="Lalah garden patch universal tracker coloring page preview">
+                    <img loading="lazy" src="assets/printables/patch-tracker-preview.jpg" alt="Lalah garden patch universal tracker coloring page preview">
                     <span>Garden Patch Tracker</span>
                 </div>
             </div>
@@ -120,6 +123,7 @@
                 <h2><i class="fa-solid fa-download"></i> Get the Free Tracking PDFs</h2>
 
                 <form class="email-form" onsubmit="handleSubmit(event)">
+                    <label for="email-kit" class="sr-only">you@example.com</label>
                     <input type="email" id="email-kit" class="input" placeholder="you@example.com" required>
                     <button type="submit" class="btn btn-primary">Email me the PDFs</button>
                 </form>
@@ -138,6 +142,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -182,7 +188,7 @@
     </footer>
 
     <!-- TOAST -->
-    <div class="toast" id="toast">
+    <div class="toast" role="alert" aria-live="polite" id="toast">
         <span class="toast-icon"><i class="fa-solid fa-check"></i></span>
         <span id="toast-msg">Thanks!</span>
     </div>
@@ -193,6 +199,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms | Pixie Journey</title>
-    <meta name="description" content="Plain-language terms for using Pixie Journey.">
+    <title>Terms of Service | Pixie Journey</title>
+    <meta name="description" content="Pixie Journey terms of service. Fair, transparent terms for using our health tracking app and free printable resources.">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://pixiejourney.com/terms.html">
+    <meta property="og:title" content="Terms of Service - Pixie Journey">
+    <meta property="og:description" content="Fair, transparent terms for Pixie Journey health tracking and printable resources.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixiejourney.com/terms.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Terms of Service - Pixie Journey">
+    <meta name="twitter:description" content="Fair, transparent terms for Pixie Journey health tracking and printable resources.">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -34,6 +43,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -50,6 +61,7 @@
     <!-- PAGE HEADER -->
     <section class="page-header">
         <h1>Terms</h1>
+            <p style="color: #8A9096; font-size: 0.9rem; margin-top: -0.5rem;">Last updated: March 14, 2026</p>
     </section>
 
     <!-- PLAIN LANGUAGE NOTICE -->
@@ -138,6 +150,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -186,6 +200,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>

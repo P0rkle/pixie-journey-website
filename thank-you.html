@@ -12,8 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -33,6 +35,8 @@
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -131,6 +135,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -179,6 +185,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>

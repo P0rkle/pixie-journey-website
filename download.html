@@ -92,6 +92,7 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -112,6 +113,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="free-tracking-pdfs.html" class="nav-cta">Get Free Tracking PDFs</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -140,6 +143,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -184,7 +189,7 @@
     </footer>
 
     <!-- TOAST -->
-    <div class="toast" id="toast">
+    <div class="toast" role="alert" aria-live="polite" id="toast">
         <span class="toast-icon"><i class="fa-solid fa-check"></i></span>
         <span id="toast-msg">Thanks!</span>
     </div>
@@ -199,6 +204,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
 
@@ -209,42 +216,84 @@
         setTimeout(function() { toast.classList.remove('show'); }, 3000);
     }
 
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
     function renderError(title, message) {
-        document.getElementById('download-area').innerHTML = `
-            <div class="status-icon error">
-                <i class="fa-solid fa-circle-exclamation"></i>
-            </div>
-            <h2>${title}</h2>
-            <p>${message}</p>
-            <a href="free-tracking-pdfs.html" class="retry-link">
-                <i class="fa-solid fa-arrow-left"></i> Request a new download link
-            </a>
-        `;
+        var area = document.getElementById('download-area');
+        area.textContent = '';
+
+        var icon = document.createElement('div');
+        icon.className = 'status-icon error';
+        icon.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>';
+        area.appendChild(icon);
+
+        var h2 = document.createElement('h2');
+        h2.textContent = title;
+        area.appendChild(h2);
+
+        var p = document.createElement('p');
+        p.textContent = message;
+        area.appendChild(p);
+
+        var link = document.createElement('a');
+        link.href = 'free-tracking-pdfs.html';
+        link.className = 'retry-link';
+        link.innerHTML = '<i class="fa-solid fa-arrow-left"></i> Request a new download link';
+        area.appendChild(link);
     }
 
     function renderSuccess(files, remaining) {
-        let fileListHtml = files.map(f => `
-            <li>
-                <span class="file-name">${f.name}</span>
-                <a href="${f.url}" download><i class="fa-solid fa-download"></i> Download</a>
-            </li>
-        `).join('');
+        var area = document.getElementById('download-area');
+        area.textContent = '';
 
-        document.getElementById('download-area').innerHTML = `
-            <div class="status-icon success">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <h2>Your PDFs are ready!</h2>
-            <p>Click each file to download. Each PDF includes a bonus dot grid page on the back.</p>
-            <ul class="file-list">${fileListHtml}</ul>
-            <p class="downloads-remaining">${remaining} download${remaining !== 1 ? 's' : ''} remaining on this link</p>
-            <p style="font-size: 0.85rem; color: #6B7280; margin-top: 1.25rem; max-width: 440px; line-height: 1.5;">
-                <strong>Printing tip:</strong> Set your printer to "Actual size" (not "Fit to page") for best results. For double-sided printing, use "Flip on long edge." <a href="faq.html#free-tracking-pdfs" style="color: var(--sage, #7A9B90);">More printing help</a>
-            </p>
-            <p style="font-size: 0.8rem; color: #9CA3AF; margin-top: 0.75rem;">
-                Personal use + classroom/clinic printing allowed. Not for resale or redistribution.
-            </p>
-        `;
+        var icon = document.createElement('div');
+        icon.className = 'status-icon success';
+        icon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        area.appendChild(icon);
+
+        var h2 = document.createElement('h2');
+        h2.textContent = 'Your PDFs are ready!';
+        area.appendChild(h2);
+
+        var desc = document.createElement('p');
+        desc.textContent = 'Click each file to download. Each PDF includes a bonus dot grid page on the back.';
+        area.appendChild(desc);
+
+        var ul = document.createElement('ul');
+        ul.className = 'file-list';
+        files.forEach(function(f) {
+            var li = document.createElement('li');
+            var nameSpan = document.createElement('span');
+            nameSpan.className = 'file-name';
+            nameSpan.textContent = f.name;
+            li.appendChild(nameSpan);
+            var a = document.createElement('a');
+            a.href = f.url;
+            a.setAttribute('download', '');
+            a.innerHTML = '<i class="fa-solid fa-download"></i> Download';
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        area.appendChild(ul);
+
+        var rem = document.createElement('p');
+        rem.className = 'downloads-remaining';
+        rem.textContent = remaining + ' download' + (remaining !== 1 ? 's' : '') + ' remaining on this link';
+        area.appendChild(rem);
+
+        var tip = document.createElement('p');
+        tip.style.cssText = 'font-size: 0.85rem; color: #6B7280; margin-top: 1.25rem; max-width: 440px; line-height: 1.5;';
+        tip.innerHTML = '<strong>Printing tip:</strong> Set your printer to "Actual size" (not "Fit to page") for best results. For double-sided printing, use "Flip on long edge." <a href="faq.html#free-tracking-pdfs" style="color: var(--sage, #7A9B90);">More printing help</a>';
+        area.appendChild(tip);
+
+        var license = document.createElement('p');
+        license.style.cssText = 'font-size: 0.8rem; color: #9CA3AF; margin-top: 0.75rem;';
+        license.textContent = 'Personal use + classroom/clinic printing allowed. Not for resale or redistribution.';
+        area.appendChild(license);
     }
 
     async function validateAndDownload() {

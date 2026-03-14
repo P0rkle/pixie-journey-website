@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Pixie Journey</title>
-    <meta name="description" content="Frequently asked questions about Pixie Journey health tracking app.">
+    <title>FAQ | Pixie Journey - Free Trackers, Printing Tips & Pricing</title>
+    <meta name="description" content="Frequently asked questions about Pixie Journey. Learn about our free tracker PDFs, printing instructions, pricing, NDIS support, and how to get started.">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://pixiejourney.com/faq.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What do I get?", "acceptedAnswer": {"@type": "Answer", "text": "Four beautifully illustrated Lalah tracker coloring pages as print-ready PDFs: Mood Star Tracker, Sleep Potion Tracker, Macaron Tracker (universal), and Garden Patch Tracker (universal). Each PDF includes a bonus dot grid page on the back for notes or extra tracking."}},
+            {"@type": "Question", "name": "Are the tracking PDFs free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — completely free. Enter your email and we'll send you a download link."}},
+            {"@type": "Question", "name": "What size are the PDFs?", "acceptedAnswer": {"@type": "Answer", "text": "True A4 (210 x 297 mm) at 300 DPI — designed for Australian standard paper. They'll also print on US Letter with very slight cropping at the top and bottom."}},
+            {"@type": "Question", "name": "How do I print them correctly?", "acceptedAnswer": {"@type": "Answer", "text": "Set paper size to A4, scale to 'Actual size' or '100%' (not 'Fit to page'), and print in black and white."}},
+            {"@type": "Question", "name": "How do I print double-sided so page 2 isn't upside down?", "acceptedAnswer": {"@type": "Answer", "text": "For automatic duplex, choose 'Print on both sides' and select 'Flip on long edge'. For manual flip, print page 1 first, put paper back printed side face-up with top going in first, then print page 2."}},
+            {"@type": "Question", "name": "Can I use them digitally (GoodNotes / Notability)?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — import the PDF into your note app and colour digitally with Apple Pencil or stylus."}},
+            {"@type": "Question", "name": "What is Pixie Journey?", "acceptedAnswer": {"@type": "Answer", "text": "Pixie Journey is a cosy Life in Pixels tracking system for bullet journal lovers. Fill one square a day and watch patterns appear over time — with no streaks and no pressure."}},
+            {"@type": "Question", "name": "When does it launch?", "acceptedAnswer": {"@type": "Answer", "text": "Q3 2026 (July-September 2026) for iOS in Australia. We'll expand to other countries and Android after the initial launch."}},
+            {"@type": "Question", "name": "Is Life Free really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Life Free is completely free forever. No time limit, no credit card required, no hidden fees. Track up to 5 categories + 1 planning for as long as you want."}},
+            {"@type": "Question", "name": "How does waitlist pricing work?", "acceptedAnswer": {"@type": "Answer", "text": "All waitlist members get Life+ Lifetime for $14.99 instead of the regular $49.99 (save $35). This pricing is locked in for you when we launch."}},
+            {"@type": "Question", "name": "Is my data private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your health data stays yours. We don't sell it, share it with advertisers, or use it to train AI models."}},
+            {"@type": "Question", "name": "Can I use this for birth control?", "acceptedAnswer": {"@type": "Answer", "text": "NO. Pixie Journey is for cycle awareness only. It is NOT contraception and should NOT be used to prevent pregnancy."}},
+            {"@type": "Question", "name": "Does it work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! The app works completely offline. Cloud sync requires internet, but all core tracking works without connection."}}
+        ]
+    }
+    </script>
+    <meta property="og:title" content="Pixie Journey FAQ">
+    <meta property="og:description" content="Everything you need to know about Pixie Journey. Free trackers, printing tips, pricing, and NDIS support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixiejourney.com/faq.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pixie Journey FAQ">
+    <meta name="twitter:description" content="Everything you need to know about Pixie Journey. Free trackers, printing tips, pricing, and NDIS support.">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -34,6 +64,8 @@
                 <a href="faq.html" class="active">FAQ</a>
                 <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -304,6 +336,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -353,6 +387,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>

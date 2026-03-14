@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy & Safety | Pixie Journey</title>
-    <meta name="description" content="Privacy, safety, and disclaimer information for Pixie Journey. Crisis resources, data protection commitments, and health disclaimer.">
+    <title>Privacy, Safety & Disclaimer | Pixie Journey</title>
+    <meta name="description" content="Pixie Journey safety information, crisis resources, and medical disclaimers. Your wellbeing matters more than any app.">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://pixiejourney.com/privacy-safety.html">
+    <meta property="og:title" content="Privacy & Safety - Pixie Journey">
+    <meta property="og:description" content="Safety information, crisis resources, and medical disclaimers for Pixie Journey users.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixiejourney.com/privacy-safety.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy & Safety - Pixie Journey">
+    <meta name="twitter:description" content="Safety information, crisis resources, and medical disclaimers for Pixie Journey users.">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -34,6 +43,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -50,6 +61,7 @@
     <!-- PAGE HEADER -->
     <section class="page-header">
         <h1>Privacy & Safety</h1>
+            <p style="color: #8A9096; font-size: 0.9rem; margin-top: -0.5rem;">Last updated: March 14, 2026</p>
         <p class="subtitle">Your safety and privacy matter to us.</p>
     </section>
 
@@ -68,8 +80,8 @@
                     <h3>Australia:</h3>
                     <ul class="crisis-list">
                         <li><strong>Emergency:</strong> 000</li>
-                        <li><strong>Lifeline (24/7):</strong> 13 11 14 | <a href="https://www.lifeline.org.au" target="_blank">lifeline.org.au</a></li>
-                        <li><strong>Beyond Blue (24/7):</strong> 1300 22 4636 | <a href="https://www.beyondblue.org.au" target="_blank">beyondblue.org.au</a></li>
+                        <li><strong>Lifeline (24/7):</strong> 13 11 14 | <a href="https://www.lifeline.org.au" target="_blank" rel="noopener noreferrer">lifeline.org.au</a></li>
+                        <li><strong>Beyond Blue (24/7):</strong> 1300 22 4636 | <a href="https://www.beyondblue.org.au" target="_blank" rel="noopener noreferrer">beyondblue.org.au</a></li>
                         <li><strong>Suicide Call Back Service (24/7):</strong> 1300 659 467</li>
                         <li><strong>Kids Helpline (ages 5-25):</strong> 1800 55 1800</li>
                         <li><strong>1800RESPECT (DV/sexual violence):</strong> 1800 737 732</li>
@@ -219,6 +231,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -267,6 +281,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>

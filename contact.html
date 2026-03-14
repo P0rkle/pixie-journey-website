@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Pixie Journey</title>
-    <meta name="description" content="Get in touch with Pixie Journey. Help with downloads, printing, or feedback.">
+    <title>Contact Pixie Journey | Get in Touch</title>
+    <meta name="description" content="Have questions about Pixie Journey? Get in touch with our team. We'd love to hear from you about features, partnerships, or NDIS enquiries.">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://pixiejourney.com/contact.html">
+    <meta property="og:title" content="Contact Pixie Journey">
+    <meta property="og:description" content="Questions about Pixie Journey? Reach out about features, partnerships, or NDIS support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixiejourney.com/contact.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact Pixie Journey">
+    <meta name="twitter:description" content="Questions about Pixie Journey? Reach out about features, partnerships, or NDIS support.">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
     <header class="site-header">
@@ -34,6 +43,8 @@
                 <a href="faq.html">FAQ</a>
                 <a href="free-tracking-pdfs.html" class="nav-cta">Get Free Tracking PDFs</a>
             </nav>
+
+    <main id="main-content">
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -83,6 +94,8 @@
     </section>
 
     <!-- FOOTER -->
+        </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-grid">
@@ -132,6 +145,8 @@
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+            var expanded = mainNav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', expanded);
         });
     }
     </script>
