@@ -981,6 +981,89 @@ input:checked + .toggle-slider:before { transform: translateX(28px); }
     font-size: 0.9rem;
 }
 
+/* ===== PINTEREST SAVE BUTTON ===== */
+.pin-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.pin-wrap .pin-save {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #E60023;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    line-height: 1;
+}
+.pin-wrap:hover .pin-save,
+.pin-wrap:focus-within .pin-save {
+    opacity: 1;
+}
+.pin-save:hover {
+    background: #ad081b;
+}
+.pin-save svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+.printable-hero-img-wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.printable-hero-img-wrap .pin-save {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #E60023;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 8px 18px;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    line-height: 1;
+}
+.printable-hero-img-wrap:hover .pin-save,
+.printable-hero-img-wrap:focus-within .pin-save {
+    opacity: 1;
+}
+.printable-hero-img-wrap .pin-save:hover {
+    background: #ad081b;
+}
+.printable-hero-img-wrap img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+@media print {
+    .pin-save { display: none !important; }
+}
+
 /* ===== PREVIEW CARD FLIP ===== */
 .preview-card {
     perspective: 800px;
