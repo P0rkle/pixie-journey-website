@@ -981,6 +981,126 @@ input:checked + .toggle-slider:before { transform: translateX(28px); }
     font-size: 0.9rem;
 }
 
+/* ===== PREVIEW CARD FLIP ===== */
+.preview-card {
+    perspective: 800px;
+    cursor: pointer;
+}
+.flip-card-inner {
+    position: relative;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+.preview-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+.flip-card-back img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+.flip-card-back span {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--outline-brown);
+    font-size: 0.9rem;
+}
+.flip-hint {
+    font-size: 0.75rem;
+    color: var(--text-brown);
+    opacity: 0.6;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* ===== DOT GRID BONUS ===== */
+.dot-grid-bonus {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #FFF5E6;
+    border: 3px solid var(--outline-brown);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 2rem 0 1.5rem;
+    box-shadow: 3px 3px 0 var(--outline-brown);
+}
+.dot-grid-thumb {
+    width: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--outline-brown);
+    flex-shrink: 0;
+}
+.dot-grid-info h3 {
+    font-family: var(--font-display);
+    color: var(--outline-brown);
+    margin-bottom: 0.5rem;
+}
+.dot-grid-info p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 2rem;
+    gap: 1rem;
+}
+.lightbox-overlay.active {
+    display: flex;
+}
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    cursor: default;
+}
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-family: var(--font-display);
+    line-height: 1;
+    z-index: 1001;
+}
+.lightbox-close:hover { opacity: 0.7; }
+.lightbox-caption {
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    text-align: center;
+}
+.lightbox-cta {
+    cursor: pointer;
+}
+
 /* ===== FAQ ===== */
 .faq-category-title {
     font-family: var(--font-display);
