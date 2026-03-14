@@ -15,11 +15,27 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache static assets
+# Cache static assets (brand assets - long cache)
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/stickers/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/lalah-hero.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/screen-daily-logging-ui.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Printable assets - short cache so updates show quickly
+[[headers]]
+  for = "/assets/printables/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/images/*"
